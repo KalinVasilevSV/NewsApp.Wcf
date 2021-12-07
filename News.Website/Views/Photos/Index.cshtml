@@ -1,0 +1,51 @@
+﻿@model IEnumerable<News.Website.Models.PhotoVM>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Photo Index</h2>
+
+@if (Model.Any())
+{
+    <span>A list of registered photos.</span>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Location</th>
+                <th>Type</th>
+                <th>Taken On</th>
+                <th>Publication Date</th>
+                <th>Description</th>
+                <th>Author</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (News.Website.Models.PhotoVM photo in Model)
+            {
+            <tr>
+                <td>@photo.ID</td>
+                <td>@photo.Title</td>
+                <td>@photo.Location</td>
+                <td>@photo.Type</td>
+                <td>@photo.TakenOn.Day/@photo.TakenOn.Month/@photo.TakenOn.Year</td>
+                <td>@photo.PublicationDate.Day/@photo.PublicationDate.Month/@photo.PublicationDate.Year</td>
+                <td>@photo.Description</td>
+                <td>@photo.Author</td>
+                <td>
+                    <img src="data:image/jpeg;base64,@ViewData.AsQueryable().Where(p=>p.Key==photo.ID.ToString()).Single().Value.ToString()" />
+                    @ViewData.AsQueryable().Where(p => p.Key == photo.ID.ToString()).Single().Value
+                </td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+}
+else
+{
+    <span>No news agencies.</span>
+}

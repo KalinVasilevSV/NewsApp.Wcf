@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Data", "News.Data\News.Data.csproj", "{F3E63468-084C-4225-915C-328C710B2DBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.ApplicationServices", "News.ApplicationServices\News.ApplicationServices.csproj", "{8D65F34A-81A5-4D00-99EC-BED18B385686}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "News.WcfService", "News.WcfService\", "{C9655F5B-3179-4574-AC3D-EAB75D291167}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		ProjectReferences = "{8d65f34a-81a5-4d00-99ec-bed18b385686}|News.ApplicationServices.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64106"
+		Debug.AspNetCompiler.PhysicalPath = "News.WcfService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64106\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64106"
+		Release.AspNetCompiler.PhysicalPath = "News.WcfService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64106\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "64106"
+		SlnRelativePath = "News.WcfService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Website", "News.Website\News.Website.csproj", "{D2774736-90A0-4BAA-BE16-187AF92FE624}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C9655F5B-3179-4574-AC3D-EAB75D291167} = {C9655F5B-3179-4574-AC3D-EAB75D291167}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3E63468-084C-4225-915C-328C710B2DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3E63468-084C-4225-915C-328C710B2DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3E63468-084C-4225-915C-328C710B2DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3E63468-084C-4225-915C-328C710B2DBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D65F34A-81A5-4D00-99EC-BED18B385686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D65F34A-81A5-4D00-99EC-BED18B385686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D65F34A-81A5-4D00-99EC-BED18B385686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D65F34A-81A5-4D00-99EC-BED18B385686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9655F5B-3179-4574-AC3D-EAB75D291167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9655F5B-3179-4574-AC3D-EAB75D291167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9655F5B-3179-4574-AC3D-EAB75D291167}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9655F5B-3179-4574-AC3D-EAB75D291167}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D2774736-90A0-4BAA-BE16-187AF92FE624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2774736-90A0-4BAA-BE16-187AF92FE624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2774736-90A0-4BAA-BE16-187AF92FE624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2774736-90A0-4BAA-BE16-187AF92FE624}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFDBCDF7-1FE7-4AA1-B513-5CD315765981}
+	EndGlobalSection
+EndGlobal

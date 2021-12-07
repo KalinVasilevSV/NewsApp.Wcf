@@ -1,0 +1,14 @@
+C:\Users\kalin\source\repos\News\News.Data\bin\Debug\News.Data.dll.config
+C:\Users\kalin\source\repos\News\News.Data\bin\Debug\News.Data.dll
+C:\Users\kalin\source\repos\News\News.Data\bin\Debug\News.Data.pdb
+C:\Users\kalin\source\repos\News\News.Data\bin\Debug\EntityFramework.dll
+C:\Users\kalin\source\repos\News\News.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kalin\source\repos\News\News.Data\bin\Debug\EntityFramework.xml
+C:\Users\kalin\source\repos\News\News.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kalin\source\repos\News\News.Data\obj\Debug\News.Data.csproj.CoreCompileInputs.cache
+C:\Users\kalin\source\repos\News\News.Data\obj\Debug\News.Data.csproj.CopyComplete
+C:\Users\kalin\source\repos\News\News.Data\obj\Debug\News.Data.dll
+C:\Users\kalin\source\repos\News\News.Data\obj\Debug\News.Data.pdb
+C:\Users\kalin\source\repos\News\News.Data\obj\Debug\News.Data.Migrations.init.resources
+C:\Users\kalin\source\repos\News\News.Data\obj\Debug\News.Data.csproj.GenerateResource.cache
+C:\Users\kalin\source\repos\News\News.Data\obj\Debug\News.Data.Migrations.addtopictypecountry.resources

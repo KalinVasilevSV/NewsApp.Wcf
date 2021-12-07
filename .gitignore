@@ -1,0 +1,5 @@
+#ignore file 
+/.vs
+errors.txt
+/photos
+/packages

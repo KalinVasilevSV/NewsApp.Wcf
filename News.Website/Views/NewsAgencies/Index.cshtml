@@ -1,0 +1,44 @@
+﻿@model IEnumerable<News.Website.Models.NewsAgencyVM>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>News Agencies Index</h2>
+
+@if (Model.Any())
+{
+    <span>A list of registered news agencies.</span>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Country</th>
+                <th>Email</th>
+                <th>Tel</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(News.Website.Models.NewsAgencyVM agency in Model)
+                {
+                    <tr>
+                        <td>@agency.ID</td>
+                        <td>@agency.Name</td>
+                        <td>@agency.Address</td>
+                        <td>@agency.Country</td>
+                        <td>@agency.Email</td>
+                        <td>@agency.Tel</td>
+                        <td>@agency.Description</td>
+                    </tr>
+                }
+
+        </tbody>
+    </table>
+}
+else
+{
+    <span>No news agencies.</span>
+}

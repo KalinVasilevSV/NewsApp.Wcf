@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NewsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:64106/NewsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:64106/NewsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:64106/NewsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/News.ApplicationServices.DTOs" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INewsService_GetVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetArticles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticles" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetArticles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticlesResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetArticleById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticleById" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetArticleById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticleByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetArticlesByPublicationDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticlesByPublicationDate" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetArticlesByPublicationDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticlesByPublicationDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetArticlesByAuthor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticlesByAuthor" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetArticlesByAuthor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticlesByAuthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetAuthors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthors" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetAuthors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetAuthorById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorById" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetAuthorById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetAuthorsByFirstName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorsByFirstName" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetAuthorsByFirstName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorsByFirstNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetAuthorsByLastName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorsByLastName" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetAuthorsByLastName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorsByLastNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetAuthorsByFullName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorsByFullName" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetAuthorsByFullName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorsByFullNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetAuthorsByNewsAgency_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorsByNewsAgency" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetAuthorsByNewsAgency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorsByNewsAgencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetPhotos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotos" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetPhotos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotosResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetPhotoById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotoById" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetPhotoById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetPhotosByPublicationDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotosByPublicationDate" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetPhotosByPublicationDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotosByPublicationDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetPhotosByAuthor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotosByAuthor" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetPhotosByAuthor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotosByAuthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetNewsAgencies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewsAgencies" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetNewsAgencies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewsAgenciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetNewsAgencyById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewsAgencyById" />
+  </wsdl:message>
+  <wsdl:message name="INewsService_GetNewsAgencyById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewsAgencyByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="INewsService">
+    <wsdl:operation name="GetVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetVersion" message="tns:INewsService_GetVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetVersionResponse" message="tns:INewsService_GetVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArticles">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetArticles" message="tns:INewsService_GetArticles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetArticlesResponse" message="tns:INewsService_GetArticles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArticleById">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetArticleById" message="tns:INewsService_GetArticleById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetArticleByIdResponse" message="tns:INewsService_GetArticleById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArticlesByPublicationDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetArticlesByPublicationDate" message="tns:INewsService_GetArticlesByPublicationDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetArticlesByPublicationDateResponse" message="tns:INewsService_GetArticlesByPublicationDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArticlesByAuthor">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetArticlesByAuthor" message="tns:INewsService_GetArticlesByAuthor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetArticlesByAuthorResponse" message="tns:INewsService_GetArticlesByAuthor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthors">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetAuthors" message="tns:INewsService_GetAuthors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetAuthorsResponse" message="tns:INewsService_GetAuthors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorById">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetAuthorById" message="tns:INewsService_GetAuthorById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetAuthorByIdResponse" message="tns:INewsService_GetAuthorById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorsByFirstName">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetAuthorsByFirstName" message="tns:INewsService_GetAuthorsByFirstName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetAuthorsByFirstNameResponse" message="tns:INewsService_GetAuthorsByFirstName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorsByLastName">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetAuthorsByLastName" message="tns:INewsService_GetAuthorsByLastName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetAuthorsByLastNameResponse" message="tns:INewsService_GetAuthorsByLastName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorsByFullName">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetAuthorsByFullName" message="tns:INewsService_GetAuthorsByFullName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetAuthorsByFullNameResponse" message="tns:INewsService_GetAuthorsByFullName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorsByNewsAgency">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetAuthorsByNewsAgency" message="tns:INewsService_GetAuthorsByNewsAgency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetAuthorsByNewsAgencyResponse" message="tns:INewsService_GetAuthorsByNewsAgency_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotos">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetPhotos" message="tns:INewsService_GetPhotos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetPhotosResponse" message="tns:INewsService_GetPhotos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoById">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetPhotoById" message="tns:INewsService_GetPhotoById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetPhotoByIdResponse" message="tns:INewsService_GetPhotoById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotosByPublicationDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetPhotosByPublicationDate" message="tns:INewsService_GetPhotosByPublicationDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetPhotosByPublicationDateResponse" message="tns:INewsService_GetPhotosByPublicationDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotosByAuthor">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetPhotosByAuthor" message="tns:INewsService_GetPhotosByAuthor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetPhotosByAuthorResponse" message="tns:INewsService_GetPhotosByAuthor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewsAgencies">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetNewsAgencies" message="tns:INewsService_GetNewsAgencies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetNewsAgenciesResponse" message="tns:INewsService_GetNewsAgencies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewsAgencyById">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewsService/GetNewsAgencyById" message="tns:INewsService_GetNewsAgencyById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewsService/GetNewsAgencyByIdResponse" message="tns:INewsService_GetNewsAgencyById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INewsService" type="tns:INewsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetVersion">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArticles">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetArticles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArticleById">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetArticleById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArticlesByPublicationDate">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetArticlesByPublicationDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArticlesByAuthor">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetArticlesByAuthor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthors">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetAuthors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorById">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetAuthorById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorsByFirstName">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetAuthorsByFirstName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorsByLastName">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetAuthorsByLastName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorsByFullName">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetAuthorsByFullName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorsByNewsAgency">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetAuthorsByNewsAgency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotos">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetPhotos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoById">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetPhotoById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotosByPublicationDate">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetPhotosByPublicationDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotosByAuthor">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetPhotosByAuthor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewsAgencies">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetNewsAgencies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewsAgencyById">
+      <soap:operation soapAction="http://tempuri.org/INewsService/GetNewsAgencyById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NewsService">
+    <wsdl:port name="BasicHttpBinding_INewsService" binding="tns:BasicHttpBinding_INewsService">
+      <soap:address location="http://localhost:64106/NewsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

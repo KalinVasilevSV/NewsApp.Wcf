@@ -1,0 +1,15 @@
+C:\Users\kalin\source\repos\News\News.ApplicationServices\obj\Debug\News.ApplicationServices.csproj.AssemblyReference.cache
+C:\Users\kalin\source\repos\News\News.ApplicationServices\obj\Debug\News.ApplicationServices.csproj.CoreCompileInputs.cache
+C:\Users\kalin\source\repos\News\News.ApplicationServices\bin\Debug\News.ApplicationServices.dll
+C:\Users\kalin\source\repos\News\News.ApplicationServices\bin\Debug\News.ApplicationServices.pdb
+C:\Users\kalin\source\repos\News\News.ApplicationServices\bin\Debug\News.Data.dll
+C:\Users\kalin\source\repos\News\News.ApplicationServices\bin\Debug\EntityFramework.dll
+C:\Users\kalin\source\repos\News\News.ApplicationServices\bin\Debug\News.Data.pdb
+C:\Users\kalin\source\repos\News\News.ApplicationServices\bin\Debug\News.Data.dll.config
+C:\Users\kalin\source\repos\News\News.ApplicationServices\bin\Debug\EntityFramework.xml
+C:\Users\kalin\source\repos\News\News.ApplicationServices\obj\Debug\News.ApplicationServices.csproj.CopyComplete
+C:\Users\kalin\source\repos\News\News.ApplicationServices\obj\Debug\News.ApplicationServices.dll
+C:\Users\kalin\source\repos\News\News.ApplicationServices\obj\Debug\News.ApplicationServices.pdb
+C:\Users\kalin\source\repos\News\News.ApplicationServices\bin\Debug\News.ApplicationServices.dll.config
+C:\Users\kalin\source\repos\News\News.ApplicationServices\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kalin\source\repos\News\News.ApplicationServices\bin\Debug\EntityFramework.SqlServer.xml

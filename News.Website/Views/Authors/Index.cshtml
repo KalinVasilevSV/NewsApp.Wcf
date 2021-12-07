@@ -1,0 +1,46 @@
+﻿@model IEnumerable<News.Website.Models.AuthorVM>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Authors Index</h2>
+
+@if (Model.Any())
+{
+    <span>A list of registered authors.</span>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Tel</th>
+                <th>Registered On</th>
+                <th>Bio</th>
+                <th>News Agency</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (News.Website.Models.AuthorVM author in Model)
+            {
+                <tr>
+                    <td>@author.ID</td>
+                    <td>@author.FirstName</td>
+                    <td>@author.LastName</td>
+                    <td>@author.Email</td>
+                    <td>@author.Tel</td>
+                    <td>@author.RegisteredOn.Day/@author.RegisteredOn.Month/@author.RegisteredOn.Year</td>
+                    <td>@author.Bio</td>
+                    <td>@author.NewsAgency</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
+else
+{
+    <span>No news agencies.</span>
+}

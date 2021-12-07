@@ -1,0 +1,46 @@
+﻿@model IEnumerable<News.Website.Models.ArticleVM>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Articles Index</h2>
+
+@if (Model.Any())
+{
+    <span>A list of registered articles.</span>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>SubTitle</th>
+                <th>Topic</th>
+                <th>Publication Date</th>
+                <th>Abstract</th>
+                <th>Content</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (News.Website.Models.ArticleVM article in Model)
+            {
+                <tr>
+                    <td>@article.ID</td>
+                    <td>@article.Title</td>
+                    <td>@article.SubTitle</td>
+                    <td>@article.Topic</td>
+                    <td>@article.PublicationDate.Day/@article.PublicationDate.Month/@article.PublicationDate.Year</td>
+                    <td>@article.Abstract</td>
+                    <td>@article.Content</td>
+                    <td>@article.Author</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
+else
+{
+    <span>No news agencies.</span>
+}
