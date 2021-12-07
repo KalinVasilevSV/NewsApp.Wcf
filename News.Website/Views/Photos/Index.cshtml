@@ -36,8 +36,7 @@
                 <td>@photo.Description</td>
                 <td>@photo.Author</td>
                 <td>
-                    <img src="data:image/jpeg;base64,@ViewData.AsQueryable().Where(p=>p.Key==photo.ID.ToString()).Single().Value.ToString()" />
-                    @ViewData.AsQueryable().Where(p => p.Key == photo.ID.ToString()).Single().Value
+                    <img src="data:image/jpeg;base64,@ViewData.AsQueryable().Where(p=>p.Key==photo.ID.ToString()).Single().Value" width="300" height="200"/>
                 </td>
             </tr>
             }
@@ -47,5 +46,5 @@
 }
 else
 {
-    <span>No news agencies.</span>
+    <span>No photos.</span>
 }

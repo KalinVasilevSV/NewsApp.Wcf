@@ -12,3 +12,4 @@ C:\Users\kalin\source\repos\News\News.Data\obj\Debug\News.Data.pdb
 C:\Users\kalin\source\repos\News\News.Data\obj\Debug\News.Data.Migrations.init.resources
 C:\Users\kalin\source\repos\News\News.Data\obj\Debug\News.Data.csproj.GenerateResource.cache
 C:\Users\kalin\source\repos\News\News.Data\obj\Debug\News.Data.Migrations.addtopictypecountry.resources
+C:\Users\kalin\source\repos\News\News.Data\obj\Debug\News.Data.csproj.AssemblyReference.cache
