@@ -113,8 +113,11 @@ null,
 'NEW YORK, Nov 22 (Reuters) - The New York Times urged a judge to restore what it called its constitutionally-protected freedom to cover the conservative activist group Project Veritas, on the eve of a hearing on a rare attempt to block news coverage by major media.',
 9,4);
 -- Photos
-insert into Photos (Title,Location,TakenOn,PublicationDate,Description,Data,AuthorID,PhotoTypeID) values ('Putin','Moscow','2021-11-20','2021-11-23','It''s Putin too', cast((SELECT * FROM OPENROWSET(BULK 'C:\Users\kalin\source\repos\News\photos\putin.jpg', SINGLE_CLOB) as Data)as varbinary(max)),8,1);
+--insert into Photos (Title,Location,TakenOn,PublicationDate,Description,Data,AuthorID,PhotoTypeID) values ('Putin','Moscow','2021-11-20','2021-11-23','It''s Putin too', cast((SELECT * FROM OPENROWSET(BULK 'C:\Users\kalin\source\repos\News\photos\putin.jpg', SINGLE_CLOB) as Data)as varbinary(max)),8,1);
+--insert into Photos (Title,Location,TakenOn,PublicationDate,Description,Data,AuthorID,PhotoTypeID) values ('Dogecoin','Clownworld','2021-11-20','2021-11-23','Dogecoin so doge', cast((SELECT * FROM OPENROWSET(BULK 'C:\Users\kalin\source\repos\News\photos\dogecoin.jpg', SINGLE_CLOB) as image)as varbinary(max)),8,1);
 
-insert into Photos (Title,Location,TakenOn,PublicationDate,Description,Data,AuthorID,PhotoTypeID) values ('Dogecoin','Clownworld','2021-11-20','2021-11-23','Dogecoin so doge', cast((SELECT * FROM OPENROWSET(BULK 'C:\Users\kalin\source\repos\News\photos\dogecoin.jpg', SINGLE_CLOB) as Data)as varbinary(max)),8,1);
+insert into Photos (Title,Location,TakenOn,PublicationDate,Description,Data,AuthorID,PhotoTypeID) values ('DogecoinTest2','Clownworld','2021-11-20','2021-11-23','Dogecoin so doge', (SELECT * FROM OPENROWSET(BULK 'C:\Users\kalin\source\repos\News\photos\dogecoin.jpg', SINGLE_BLOB) as image),8,1);
+insert into Photos (Title,Location,TakenOn,PublicationDate,Description,Data,AuthorID,PhotoTypeID) values ('Putin','Moscow','2021-11-20','2021-11-23','It''s Putin too', (SELECT * FROM OPENROWSET(BULK 'C:\Users\kalin\source\repos\News\photos\putin.jpg', SINGLE_BLOB) as image),8,1);
+insert into Photos (Title,Location,TakenOn,PublicationDate,Description,Data,AuthorID,PhotoTypeID) values ('Dogecoin','Clownworld','2021-11-20','2021-11-23','Dogecoin so doge', (SELECT * FROM OPENROWSET(BULK 'C:\Users\kalin\source\repos\News\photos\dogecoin.jpg', SINGLE_BLOB) as Data),8,1);
 
-insert into Photos (Title,Location,TakenOn,PublicationDate,Description,Data,AuthorID,PhotoTypeID) values ('DogecoinTest2','Clownworld','2021-11-20','2021-11-23','Dogecoin so doge', (SELECT * FROM OPENROWSET(BULK 'C:\Users\kalin\source\repos\News\photos\dogecoin.jpg', SINGLE_CLOB) as image),8,1);
+delete from Photos where ID=12;
